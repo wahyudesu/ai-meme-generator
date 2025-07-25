@@ -12,6 +12,17 @@ export const mastra = new Mastra({
     // stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
     url: ":memory:",
   }),
+  telemetry: {
+    enabled: true,
+  },
+  server: {
+    build: {
+      swaggerUI: true,
+      apiReqLogs: true,
+      openAPIDocs: true,
+
+    },
+  },
   logger: new PinoLogger({
     name: 'Mastra',
     level: 'info',
