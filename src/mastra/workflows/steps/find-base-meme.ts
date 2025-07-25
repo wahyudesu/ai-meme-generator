@@ -22,7 +22,7 @@ export const findBaseMemeStep = createStep({
   }),
   execute: async ({ inputData }) => {
     try {
-      console.log('🔍 Mencari template meme yang sempurna...');
+      console.log('🔍 Mencari template meme yang sesuai...');
 
       const response = await fetch('https://api.imgflip.com/get_memes');
       const data = await response.json();

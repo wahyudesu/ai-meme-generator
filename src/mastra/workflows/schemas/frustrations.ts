@@ -7,11 +7,10 @@ export const frustrationsSchema = z.object({
       text: z.string().describe('Keluhan spesifik yang disebutkan'),
       category: z
         .enum([
-          'rapat',
-          'proses',
+          'pemerintah',
           'teknologi',
-          'komunikasi',
-          'manajemen',
+          'dark jokes',
+          'drama atis',
           'beban-kerja',
           'lainnya',
         ])
@@ -19,17 +18,17 @@ export const frustrationsSchema = z.object({
       severity: z
         .enum(['ringan', 'sedang', 'berat'])
         .describe('Seberapa parah keluhan ini'),
-      department: z
-        .enum([
-          'engineering',
-          'sales',
-          'marketing',
-          'hr',
-          'finance',
-          'operasional',
-          'umum',
-        ])
-        .describe('Departemen yang terkait dengan keluhan ini'),
+      // department: z
+      //   .enum([
+      //     'engineering',
+      //     'sales',
+      //     'marketing',
+      //     'hr',
+      //     'finance',
+      //     'operasional',
+      //     'umum',
+      //   ])
+      //   .describe('Departemen yang terkait dengan keluhan ini'),
       keywords: z
         .array(z.string())
         .describe('Kata kunci yang bisa digunakan untuk pencarian meme'),
